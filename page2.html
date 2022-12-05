@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />  
+    <title>GALLERY SLIDER</title>  
+    <style type="text/css">  
+
+ul {
+	font-family: "fantasy";
+    list-style-type: none;
+    margin: auto;
+    padding: auto;
+    position: absolute;
+    overflow: hidden;
+   
+}
+
+li {
+font-family: fantasy;
+  float: left;
+  margin: 112px;
+  margin-top: 30px;
+  background-image: url("pic2.jpg");
+}	
+
+li a{
+	display: inline-block;
+	     	color: black;
+	     	text-align: center;
+	     	padding: 14px 16px;
+	     	text-decoration: none;
+}
+
+
+
+li a:hover:not(.active){
+	background-image: url("pic3.jpg");
+	color: black;
+}
+
+	.active{
+	background-color: #EAB3F3;
+	color: #8B5694;
+}
+
+h1{
+
+	font-family: cursive;
+	color: #8B5694;
+	text-align: center;
+	font-size: 50px;
+	margin: auto;
+	text-align: center;
+  font-size: 25px;
+  background-image: url("pic4.jpg");
+  background-size: 150em;
+  background-repeat: no-repeat;
+  border-style: double;
+  border-width: thin;
+  padding: 10px;
+  margin-top: 30px;
+   margin-left: 150px;
+  margin-right: 150px;
+	}
+
+h2{
+	 text-align: center;
+  font-size: 40px;
+  font-family: script;
+  background-image: url("nn.jpg");
+  background-size: 45em;
+  background-repeat: no-repeat;
+  border-style: double;
+  padding: 40px;
+  margin-top: 30px;
+}
+h3{
+	 text-align: center;
+  font-size: 40px;
+  font-family: script;
+  background-size: 45em;
+  background-repeat: no-repeat;
+  border-style: double;
+  padding: 40px;
+  margin-top: 30px;
+}
+div.st{
+  text-align: left;
+  padding: 55px;
+  margin-top: 55px;
+}	
+
+
+body {  
+            margin: 20px;  
+           background-image: url("pic1.jpg");
+		   
+        }  
+        .showSlide {  
+            display: none 
+			
+        }  
+            .showSlide img {  
+                width: 100%;  
+				img-position: "center";
+            }  
+        .slidercontainer {  
+            max-width: 1000px;  
+            position: relative;  
+            margin: auto;  
+        }  
+        .left, .right {  
+            cursor: pointer;  
+            position: absolute;  
+            top: 50%;  
+            width: auto;  
+            padding: 16px;  
+            margin-top: -20px;  
+            color: white;  
+            font-weight: bold;  
+            font-size: 19px;  
+            transition: 0.5s ease;  
+            border-radius: 8 3px 3px 8;  
+        }  
+        .right {  
+            right: 0;  
+            border-radius: 9px 0 0 9px;  
+        }  
+            .left:hover, .right:hover {  
+                background-color: rgba(115, 115, 115, 0.8);  
+            }  
+        .content {  
+            color: #8B5694;  
+			font-family: cursive; 
+            font-size: 30px;  
+            padding: 8px 12px;  
+            position: absolute;  
+            top: 10px;  
+            width: 100%;  
+            text-align: center;  
+			text-shadow: 2px 1px white;
+        }  
+        .active {  
+            background-color: #BEFCF4;  
+        }  
+        /* Fading animation */  
+        .fade {  
+            -webkit-animation-name: fade;  
+            -webkit-animation-duration: 1.3s;  
+            animation-name: fade;  
+            animation-duration: 1.3s;  
+        }  
+        @-webkit-keyframes fade {  
+            from {  
+                opacity: .5  
+            }  
+            to {  
+                opacity: 1  
+            }  
+        }  
+  
+        @keyframes fade {  
+            from {  
+                opacity: .5  
+            }  
+            to {  
+                opacity: 1  
+            } 
+		
+        }  
+    </style>  
+
+</head>  
+<body>  
+<h1>WELCOME TO MY PERSONAL WEBSITE</h1>
+	<div>
+<ul>
+	  <li><a href="page1.html">Random Pics<br>♡</a></li>
+      <li><a class="index.html">Me<br>♡</a></li>
+      <li><a href="active">Dreams<br>♡</a></li>
+      <li><a href="page3.html">Family<br>♡</a></li>
+      <li><a href="page4.html">Favorites<br>♡</a></li>
+      <li><a href="page5.html">Songs<br>♡</a></li>
+     
+ </ul>
+</div>
+<h1></h1>
+</div>
+<h1></h1>
+    <div class="slidercontainer">  
+        <div class="showSlide fade">  
+            <img src="f.png" />  
+            <div class="content">♡Bigest dream is to become a fashion Designer♡
+			</div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="f1.png" />  
+            <div class="content">♡Dream destinations since most of fashion shows perfromed there (insert Milan, Italy) <br> and I love how most people dressed in this countries♡
+			</div>  
+        </div>  
+  
+        <div class="showSlide fade">  
+            <img src="finn.png" />  
+            <div class="content">♡He is my dream boy- char♡
+			</div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="" />  
+            <div class="content">♡♡♡More dreams to come♡♡♡
+			</div>  
+        </div>  
+         
+        <a class="left" onclick="nextSlide(-1)">❮</a>  
+        <a class="right" onclick="nextSlide(1)">❯</a>  
+    </div>  
+  
+    <script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+    </script>  
+  
+</body>  
+</html>  
